@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TravelOrbit | Travel Guides, Visa Information & Holiday Planning</title>
+
+    <meta name="description" content="TravelOrbit provides useful travel information, international tourist visa guides, Dubai tour packages, destination insights, itineraries and travel planning resources for Indian travelers.">
+
+    <meta name="keywords" content="TravelOrbit, travel guides, tourist visa, international travel, Dubai tour packages, travel tips, holiday planning, travel information for Indians">
+
+    <meta name="robots" content="index, follow">
+
+    <!-- Replace this with your actual GitHub Pages URL -->
+    <link rel="canonical" href="https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #1f2937;
+            background: #ffffff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1180px;
+            margin: auto;
+            padding: 17px 22px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: #123f5c;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: #e67e22;
+        }
+
+        nav {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+
+        nav a {
+            font-size: 15px;
+            font-weight: 600;
+            color: #374151;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            color: #e67e22;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 600px;
+
+            background:
+                linear-gradient(
+                    rgba(7, 35, 55, 0.68),
+                    rgba(7, 35, 55, 0.68)
+                ),
+                url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=85")
+                center/cover no-repeat;
+
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-container {
+            max-width: 1180px;
+            width: 100%;
+            margin: auto;
+            padding: 80px 22px;
+        }
+
+        .hero-content {
+            max-width: 760px;
+            color: #ffffff;
+        }
+
+        .hero-label {
+            display: inline-block;
+            padding: 8px 15px;
+            border: 1px solid rgba(255,255,255,0.45);
+            background: rgba(255,255,255,0.12);
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            line-height: 1.12;
+            margin-bottom: 22px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #edf3f7;
+            max-width: 690px;
+            margin-bottom: 32px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 23px;
+            border-radius: 6px;
+            font-size: 15px;
+            font-weight: 700;
+            transition: 0.2s;
+        }
+
+        .btn-primary {
+            background: #e67e22;
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background: #cf6811;
+        }
+
+        .btn-white {
+            background: #ffffff;
+            color: #173f5f;
+        }
+
+        .btn-white:hover {
+            background: #f3f4f6;
+        }
+
+        /* ================= COMMON SECTION ================= */
+
+        .section {
+            max-width: 1180px;
+            margin: auto;
+            padding: 75px 22px;
+        }
+
+        .section-heading {
+            max-width: 760px;
+            margin: 0 auto 45px;
+            text-align: center;
+        }
+
+        .section-heading .small-title {
+            color: #e67e22;
+            font-size: 13px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+        }
+
+        .section-heading h2 {
+            color: #173f5f;
+            font-size: 37px;
+            line-height: 1.2;
+            margin: 10px 0 15px;
+        }
+
+        .section-heading p {
+            color: #6b7280;
+            font-size: 16px;
+        }
+
+        /* ================= INTRO ================= */
+
+        .intro-section {
+            background: #f8fafc;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .intro-image img {
+            height: 410px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .intro-content h2 {
+            color: #173f5f;
+            font-size: 37px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .intro-content p {
+            color: #5f6b76;
+            margin-bottom: 16px;
+        }
+
+        /* ================= SERVICES ================= */
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #ffffff;
+            transition: 0.25s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+
+        .service-card img {
+            height: 215px;
+            object-fit: cover;
+        }
+
+        .service-content {
+            padding: 24px;
+        }
+
+        .service-content h3 {
+            color: #173f5f;
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .service-content p {
+            color: #6b7280;
+            font-size: 15px;
+            margin-bottom: 17px;
+        }
+
+        .service-link {
+            color: #e67e22;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        /* ================= TRAVEL TOPICS ================= */
+
+        .topics-section {
+            background: #f8fafc;
+        }
+
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .topic-card {
+            position: relative;
+            height: 280px;
+            border-radius: 9px;
+            overflow: hidden;
+        }
+
+        .topic-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.4s ease;
+        }
+
+        .topic-card:hover img {
+            transform: scale(1.06);
+        }
+
+        .topic-overlay {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 50px 18px 18px;
+            color: #ffffff;
+
+            background:
+                linear-gradient(
+                    transparent,
+                    rgba(0,0,0,0.82)
+                );
+        }
+
+        .topic-overlay h3 {
+            font-size: 22px;
+            margin-bottom: 3px;
+        }
+
+        .topic-overlay p {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+
+        /* ================= WHY TRAVELORBIT ================= */
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 30px 24px;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+        }
+
+        .feature-number {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #fff1e5;
+            color: #e67e22;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 17px;
+            font-weight: 800;
+        }
+
+        .feature h3 {
+            color: #173f5f;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            color: #6b7280;
+            font-size: 15px;
+        }
+
+        /* ================= CTA ================= */
+
+        .cta-section {
+            background:
+                linear-gradient(
+                    rgba(15,61,94,0.91),
+                    rgba(15,61,94,0.91)
+                ),
+                url("https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1800&q=85")
+                center/cover no-repeat;
+
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 760px;
+            margin: auto;
+        }
+
+        .cta-content h2 {
+            font-size: 39px;
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+
+        .cta-content p {
+            color: #e1eaf0;
+            margin-bottom: 28px;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #102c40;
+            color: #dce5ea;
+        }
+
+        .footer-container {
+            max-width: 1180px;
+            margin: auto;
+            padding: 55px 22px 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 50px;
+            padding-bottom: 35px;
+        }
+
+        .footer-logo {
+            font-size: 27px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 14px;
+        }
+
+        .footer-logo span {
+            color: #e67e22;
+        }
+
+        footer p {
+            color: #b7c6cf;
+            font-size: 14px;
+            max-width: 420px;
+        }
+
+        footer h3 {
+            color: #ffffff;
+            font-size: 17px;
+            margin-bottom: 15px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin-bottom: 9px;
+        }
+
+        footer li a {
+            color: #b7c6cf;
+            font-size: 14px;
+        }
+
+        footer li a:hover {
+            color: #ffffff;
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.12);
+            padding-top: 20px;
+            text-align: center;
+            color: #94a8b4;
+            font-size: 13px;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 900px) {
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .intro-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .topics-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .nav-container {
+                flex-direction: column;
+                gap: 14px;
+            }
+
+            nav {
+                gap: 15px;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            .hero {
+                min-height: 540px;
+            }
+
+            .hero-container {
+                padding: 65px 18px;
+            }
+
+            .hero h1 {
+                font-size: 37px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .section {
+                padding: 55px 18px;
+            }
+
+            .section-heading h2,
+            .intro-content h2 {
+                font-size: 30px;
+            }
+
+            .services-grid,
+            .topics-grid,
+            .features-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .intro-image img {
+                height: 300px;
+            }
+
+            .topic-card {
+                height: 260px;
+            }
+
+            .cta-content h2 {
+                font-size: 31px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="nav-container">
+
+        <a href="index.html" class="logo">
+            Travel<span>Orbit</span>
+        </a>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="services.html">Services</a>
+
+            <a href="blogs.html">Blogs</a>
+
+            <a href="about.html">About</a>
+
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-container">
+
+        <div class="hero-content">
+
+            <div class="hero-label">
+                Explore • Plan • Discover
+            </div>
+
+            <h1>
+                Discover the World With Better Travel Information
+            </h1>
+
+            <p>
+                TravelOrbit brings together practical travel guides,
+                tourist visa information, destination insights,
+                holiday ideas and useful resources for Indian travelers.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="services.html" class="btn btn-primary">
+                    Explore Services
+                </a>
+
+                <a href="blogs.html" class="btn btn-white">
+                    Read Travel Blogs
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= INTRO ================= -->
+
+<section class="intro-section">
+
+    <div class="section">
+
+        <div class="intro-grid">
+
+            <div class="intro-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1000&q=85"
+                    alt="Traveler planning an international journey">
+
+            </div>
+
+
+            <div class="intro-content">
+
+                <h2>
+                    Travel Information for Your Next Journey
+                </h2>
+
+                <p>
+                    Planning an international trip involves more than
+                    choosing a destination. Travelers often need to
+                    understand visa requirements, travel seasons,
+                    attractions, accommodation and itinerary options.
+                </p>
+
+                <p>
+                    TravelOrbit is designed as a travel information
+                    resource where Indian travelers can explore useful
+                    information before planning their next journey.
+                </p>
+
+                <p>
+                    Whether you are researching a tourist visa, exploring
+                    a new destination or looking for travel planning ideas,
+                    our resources are created to make your research easier.
+                </p>
+
+                <a href="about.html" class="btn btn-primary">
+                    Learn More About TravelOrbit
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="section">
+
+    <div class="section-heading">
+
+        <div class="small-title">
+            What We Cover
+        </div>
+
+        <h2>
+            Explore Our Travel Resources
+        </h2>
+
+        <p>
+            Browse practical travel topics designed to help you research
+            and prepare for international travel.
+        </p>
+
+    </div>
+
+
+    <div class="services-grid">
+
+
+        <article class="service-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1556388158-158ea5ccacbd?auto=format&fit=crop&w=900&q=85"
+                alt="Passport and travel documents">
+
+            <div class="service-content">
+
+                <h3>
+                    International Tourist Visa
+                </h3>
+
+                <p>
+                    Explore tourist visa information, documentation,
+                    application considerations and travel preparation
+                    for international destinations.
+                </p>
+
+                <a href="services.html" class="service-link">
+                    Explore Visa Resources →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <article class="service-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=85"
+                alt="Dubai skyline and city travel">
+
+            <div class="service-content">
+
+                <h3>
+                    Dubai Tour Packages
+                </h3>
+
+                <p>
+                    Discover Dubai holiday ideas, sightseeing experiences,
+                    tour durations and planning resources for different
+                    types of travelers.
+                </p>
+
+                <a href="services.html" class="service-link">
+                    Explore Dubai Resources →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <article class="service-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=900&q=85"
+                alt="Travel planning road journey">
+
+            <div class="service-content">
+
+                <h3>
+                    Travel Planning
+                </h3>
+
+                <p>
+                    Find useful ideas about itineraries, destinations,
+                    travel seasons, planning considerations and
+                    international journeys.
+                </p>
+
+                <a href="services.html" class="service-link">
+                    Explore Planning Resources →
+                </a>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= POPULAR TOPICS ================= -->
+
+<section class="topics-section">
+
+    <div class="section">
+
+        <div class="section-heading">
+
+            <div class="small-title">
+                Popular Travel Topics
+            </div>
+
+            <h2>
+                Where Will Your Next Journey Take You?
+            </h2>
+
+            <p>
+                Explore travel inspiration across popular international
+                regions and destinations.
+            </p>
+
+        </div>
+
+
+        <div class="topics-grid">
+
+
+            <a href="services.html" class="topic-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=85"
+                    alt="Dubai travel destination">
+
+                <div class="topic-overlay">
+
+                    <h3>Dubai</h3>
+
+                    <p>
+                        City experiences and holiday planning
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <a href="services.html" class="topic-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=85"
+                    alt="Europe travel destination">
+
+                <div class="topic-overlay">
+
+                    <h3>Europe</h3>
+
+                    <p>
+                        Cities, culture and travel experiences
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <a href="services.html" class="topic-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1538485399081-7c8972b7d0e4?auto=format&fit=crop&w=800&q=85"
+                    alt="Asia travel destination">
+
+                <div class="topic-overlay">
+
+                    <h3>Asia</h3>
+
+                    <p>
+                        Diverse destinations and travel ideas
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <a href="services.html" class="topic-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=800&q=85"
+                    alt="Beautiful international travel destination">
+
+                <div class="topic-overlay">
+
+                    <h3>International</h3>
+
+                    <p>
+                        Explore destinations around the world
+                    </p>
+
+                </div>
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WHY TRAVELORBIT ================= -->
+
+<section class="section">
+
+    <div class="section-heading">
+
+        <div class="small-title">
+            Why TravelOrbit
+        </div>
+
+        <h2>
+            Information That Helps You Plan With Confidence
+        </h2>
+
+        <p>
+            Our goal is to make travel research easier by bringing
+            important planning topics together.
+        </p>
+
+    </div>
+
+
+    <div class="features-grid">
+
+
+        <div class="feature">
+
+            <div class="feature-number">
+                01
+            </div>
+
+            <h3>
+                Practical Information
+            </h3>
+
+            <p>
+                Find useful information focused on real travel planning
+                questions and common traveler needs.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-number">
+                02
+            </div>
+
+            <h3>
+                International Focus
+            </h3>
+
+            <p>
+                Explore travel topics covering destinations and journeys
+                beyond India.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-number">
+                03
+            </div>
+
+            <h3>
+                Easy Travel Research
+            </h3>
+
+            <p>
+                Discover travel resources in one simple place before
+                making your travel plans.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta-section">
+
+    <div class="section">
+
+        <div class="cta-content">
+
+            <h2>
+                Start Planning Your Next Adventure
+            </h2>
+
+            <p>
+                Explore TravelOrbit for travel information, visa resources,
+                holiday ideas and useful planning guides.
+            </p>
+
+            <a href="blogs.html" class="btn btn-primary">
+                Explore Travel Blogs
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-container">
+
+        <div class="footer-grid">
+
+
+            <div>
+
+                <div class="footer-logo">
+                    Travel<span>Orbit</span>
+                </div>
+
+                <p>
+                    TravelOrbit is an independent travel information
+                    platform covering international destinations,
+                    tourist visa resources, holiday ideas and
+                    practical travel planning information.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="services.html">Services</a>
+                    </li>
+
+                    <li>
+                        <a href="blogs.html">Blogs</a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Explore
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="services.html">
+                            Tourist Visa
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="services.html">
+                            Dubai Travel
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="services.html">
+                            Travel Planning
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="blogs.html">
+                            Travel Guides
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 TravelOrbit. All rights reserved.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
