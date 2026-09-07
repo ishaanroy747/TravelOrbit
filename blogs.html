@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelOrbit · Blog</title>
+  <meta name="description" content="TravelOrbit blog – destination guides, visa tips, itineraries and travel advice for modern explorers.">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+      background: #f5f7fc;
+      color: #1e1e2f;
+      line-height: 1.6;
+    }
+
+    /* header */
+    .site-header {
+      background: #ffffff;
+      padding: 20px 7%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e9ecf2;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #0b2b4a;
+    }
+    .logo span {
+      color: #2f7fd9;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      color: #2c3e50;
+      transition: 0.2s;
+    }
+    .nav-links a:hover {
+      color: #1f6dc6;
+    }
+
+    /* hero */
+    .hero-banner {
+      background: linear-gradient(145deg, #0b2b4a, #1a4b75);
+      color: white;
+      text-align: center;
+      padding: 60px 20px 55px;
+    }
+    .hero-banner h1 {
+      font-size: 44px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      margin-bottom: 12px;
+    }
+    .hero-banner p {
+      max-width: 720px;
+      margin: 0 auto;
+      font-size: 18px;
+      opacity: 0.9;
+      font-weight: 300;
+    }
+
+    /* main container */
+    .blog-main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 50px 25px 40px;
+    }
+
+    .section-head {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .section-head h2 {
+      font-size: 32px;
+      color: #0b2b4a;
+      margin-bottom: 6px;
+    }
+    .section-head p {
+      color: #5b6f87;
+      font-size: 17px;
+    }
+
+    /* cards */
+    .blog-card {
+      background: #ffffff;
+      padding: 32px 34px;
+      margin-bottom: 32px;
+      border-radius: 20px;
+      border: 1px solid #eef2f7;
+      box-shadow: 0 8px 24px rgba(0, 20, 40, 0.04);
+      transition: 0.2s;
+    }
+    .blog-card:hover {
+      box-shadow: 0 12px 32px rgba(0, 20, 40, 0.08);
+      border-color: #d6e2f0;
+    }
+
+    .card-tag {
+      display: inline-block;
+      background: #e5effb;
+      color: #1f6dc6;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 0.4px;
+      padding: 5px 16px;
+      border-radius: 30px;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+
+    .blog-card h2 {
+      font-size: 26px;
+      line-height: 1.3;
+      margin-bottom: 14px;
+    }
+    .blog-card h2 a {
+      color: #0b2b4a;
+      text-decoration: none;
+      transition: 0.15s;
+    }
+    .blog-card h2 a:hover {
+      color: #1f6dc6;
+    }
+
+    .blog-card p {
+      color: #3d5068;
+      font-size: 16px;
+      margin-bottom: 22px;
+      max-width: 90%;
+    }
+
+    .btn-article {
+      display: inline-block;
+      background: #1f6dc6;
+      color: #fff;
+      font-weight: 600;
+      padding: 10px 24px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-size: 15px;
+      transition: 0.2s;
+      border: 1px solid #1f6dc6;
+    }
+    .btn-article:hover {
+      background: #0b4d94;
+      border-color: #0b4d94;
+      box-shadow: 0 4px 12px rgba(31, 109, 198, 0.25);
+    }
+
+    /* footer */
+    .site-footer {
+      background: #0b1e2e;
+      color: #b6c9dd;
+      text-align: center;
+      padding: 32px 20px;
+      margin-top: 20px;
+      font-size: 15px;
+      border-top: 1px solid #1c3347;
+    }
+    .site-footer p {
+      opacity: 0.8;
+    }
+
+    /* responsive */
+    @media (max-width: 768px) {
+      .site-header {
+        flex-direction: column;
+        gap: 16px;
+        padding: 18px 20px;
+      }
+      .nav-links {
+        justify-content: center;
+        gap: 16px;
+      }
+      .hero-banner h1 {
+        font-size: 32px;
+      }
+      .hero-banner p {
+        font-size: 16px;
+      }
+      .blog-main {
+        padding: 30px 16px;
+      }
+      .blog-card {
+        padding: 22px 20px;
+      }
+      .blog-card h2 {
+        font-size: 22px;
+      }
+      .blog-card p {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo {
+        font-size: 22px;
+      }
+      .blog-card h2 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="logo">Travel<span>Orbit</span></div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="blogs.html">Blogs</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero-banner">
+    <h1>🌍 TravelOrbit Blog</h1>
+    <p>Fresh guides, visa intel, itineraries & practical travel wisdom — your next journey starts here.</p>
+  </section>
+
+  <!-- BLOG CONTENT -->
+  <main class="blog-main">
+    <div class="section-head">
+      <h2>Latest travel stories</h2>
+      <p>Handpicked articles to inspire and inform your adventures.</p>
+    </div>
+
+ 
+
+    <!-- BLOG 5 (external / honeymoon) -->
+    <article class="blog-card">
+      <span class="card-tag">💑 Dubai honeymoon</span>
+      <h2><a href="https://worldtravelpath.wordpress.com/2026/08/24/9-days-dubai-honeymoon-package-a-romantic-day-by-day-dubai-itinerary/" target="_blank" rel="noopener">9 Days Dubai Honeymoon Package: A Romantic Day‑by‑Day Dubai Itinerary</a></h2>
+      <p>Dreaming of a romantic Dubai escape? Explore a curated day‑by‑day itinerary with experiences, attractions and ideas for couples.</p>
+      <a class="btn-article" href="https://worldtravelpath.wordpress.com/2026/08/24/9-days-dubai-honeymoon-package-a-romantic-day-by-day-dubai-itinerary/" target="_blank" rel="noopener">Read full article →</a>
+    </article>
+
+    <!-- ===================================================== -->
+    <!-- ADD NEW BLOG POSTS BELOW THIS LINE (copy the block)   -->
+    <!-- ===================================================== -->
+
+    <!-- 
+      <article class="blog-card">
+        <span class="card-tag">Travel Guide</span>
+        <h2><a href="blogs/your-blog-file.html">Your Blog Title Here</a></h2>
+        <p>Short description of your blog post. Keep it concise and inviting.</p>
+        <a class="btn-article" href="blogs/your-blog-file.html">Read full article →</a>
+      </article>
+    -->
+
+    <!-- you can add as many new cards as you like, just follow the pattern above -->
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>© 2026 TravelOrbit. All rights reserved. · wander wisely</p>
+  </footer>
+
+</body>
+</html>
